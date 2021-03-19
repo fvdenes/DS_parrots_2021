@@ -33,7 +33,7 @@ rm(list=setdiff(ls(), "list1"))
 
 # Setup dataframe to store detection probabilities and other data
 
-output<-matrix(NA,nrow=212,ncol=13)
+output<-matrix(NA,nrow=212,ncol=14)
 output<-data.frame(output)
 colnames(output)<-c("Country",
                     "Ecoregion",
@@ -47,7 +47,8 @@ colnames(output)<-c("Country",
                     "Detection_function",
                     "GoF_DS_Xsq",
                     "N_(count/p)",
-                    "D_(N/Km)")
+                    "D_(N/Km)",
+                    "Group_size_beta")
 output
 str(output)
 
@@ -66,7 +67,7 @@ rm(list=setdiff(ls(), "list1"))
 
 
 # 1 ####
-index<-1
+index<-20
 
 df.all<-list1[[index]]
 df.all
