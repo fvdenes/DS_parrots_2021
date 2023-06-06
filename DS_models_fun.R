@@ -115,7 +115,7 @@ DSmodels<-function(df.all,print.plots=T,save.output=T,output.folder,max.dist=500
 
   pdf(paste0(output.folder,"figures/",paste(df$Species[1],df$Ecoregion[1],df$Pais[1],sep = " - "),".pdf"))
   hist(df$distance,xlab="Distance (m)",main=paste(df$Species[1],df$Ecoregion[1],df$Pais[1],sep = " - "))
-  plot(xlab="Distance (m)",ylab="Group size",df$distance~df$size,main=paste(df$Species[1],df$Ecoregion[1],df$Pais[1],sep = " - "))
+  plot(xlab="Distance (m)",ylab="Group size",df$size~df$distance,main=paste(df$Species[1],df$Ecoregion[1],df$Pais[1],sep = " - "))
   plot(SelMod,breaks=SelMod$ddf$meta.data$breaks,main=paste(df$Species[1],df$Ecoregion[1],df$Pais[1],sep = " - "))
   dev.off()
 
@@ -129,4 +129,4 @@ pblapply(list1,DSmodels,output.folder="/Users/franciscodenes/Documents/GitHub/DS
 
 #8
 
-df.all<-list1[[100]]
+df.all<-list1[[5]]
